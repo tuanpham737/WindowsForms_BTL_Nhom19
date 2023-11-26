@@ -15,7 +15,7 @@ namespace WindowsForms_BTL_Nhom19
     {
         SqlConnection conn;
         DataTable tblRap;
-
+        //Test github
         public void Connect() //Kết nối
         {
             conn = new SqlConnection(); //Khởi tạo đối tượng
