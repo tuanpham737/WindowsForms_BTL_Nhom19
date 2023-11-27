@@ -38,6 +38,10 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTongSoGhe = new System.Windows.Forms.TextBox();
+            this.txtMaRap = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPhongChieu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +51,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(309, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 38);
+            this.label1.Size = new System.Drawing.Size(199, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Phòng Chiếu";
             // 
@@ -92,6 +96,8 @@
             this.dataGridViewPhongChieu.RowTemplate.Height = 24;
             this.dataGridViewPhongChieu.Size = new System.Drawing.Size(685, 150);
             this.dataGridViewPhongChieu.TabIndex = 3;
+            this.dataGridViewPhongChieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPhongChieu_CellClick);
+            this.dataGridViewPhongChieu.SelectionChanged += new System.EventHandler(this.dataGridViewPhongChieu_SelectionChanged);
             // 
             // btnThem
             // 
@@ -101,6 +107,7 @@
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -110,6 +117,7 @@
             this.btnSua.TabIndex = 4;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -119,6 +127,7 @@
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThoat
             // 
@@ -129,6 +138,38 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(396, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 16);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Tổng số ghế";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(396, 156);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 16);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Mã Rạp";
+            // 
+            // txtTongSoGhe
+            // 
+            this.txtTongSoGhe.Location = new System.Drawing.Point(510, 87);
+            this.txtTongSoGhe.Name = "txtTongSoGhe";
+            this.txtTongSoGhe.Size = new System.Drawing.Size(100, 22);
+            this.txtTongSoGhe.TabIndex = 2;
+            // 
+            // txtMaRap
+            // 
+            this.txtMaRap.Location = new System.Drawing.Point(510, 153);
+            this.txtMaRap.Name = "txtMaRap";
+            this.txtMaRap.Size = new System.Drawing.Size(100, 22);
+            this.txtMaRap.TabIndex = 2;
             // 
             // FrmPhongChieu
             // 
@@ -141,8 +182,12 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dataGridViewPhongChieu);
             this.Controls.Add(this.txtTenPhong);
+            this.Controls.Add(this.txtMaRap);
+            this.Controls.Add(this.txtTongSoGhe);
             this.Controls.Add(this.txtMaPhong);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmPhongChieu";
@@ -165,5 +210,9 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtTongSoGhe;
+        private System.Windows.Forms.TextBox txtMaRap;
     }
 }

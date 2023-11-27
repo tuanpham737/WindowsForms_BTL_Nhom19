@@ -67,6 +67,7 @@
             this.btnSua.TabIndex = 0;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -76,6 +77,7 @@
             this.btnXoa.TabIndex = 0;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThoat
             // 
@@ -176,6 +178,8 @@
             this.dataGridViewQlRap.RowTemplate.Height = 24;
             this.dataGridViewQlRap.Size = new System.Drawing.Size(644, 150);
             this.dataGridViewQlRap.TabIndex = 6;
+            this.dataGridViewQlRap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewQlRap_CellClick);
+            this.dataGridViewQlRap.SelectionChanged += new System.EventHandler(this.dataGridViewQlRap_SelectionChanged);
             // 
             // label6
             // 
@@ -183,7 +187,7 @@
             this.label6.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(275, 27);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(217, 38);
+            this.label6.Size = new System.Drawing.Size(206, 37);
             this.label6.TabIndex = 7;
             this.label6.Text = "Quản Lý Rạp";
             // 
